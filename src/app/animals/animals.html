@@ -1,1 +1,9 @@
-<p>animals works!</p>
+@for (item of animals; track $index)
+{    
+    <p [ngStyle]="getStyle(item)" >  
+        {{$index + 1}}) <strong>Nome:</strong> {{item.tipo}} -
+        <strong>Specie:</strong> {{item.specie}} -
+        <strong>Nome:</strong> {{item.nome}} -
+        <strong>Data di nascita:</strong> {{item.dob | date:'dd/MM/yyyy'}}
+    </p>
+}
